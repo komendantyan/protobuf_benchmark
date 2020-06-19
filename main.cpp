@@ -223,19 +223,12 @@ void testRuntimeMessage() {
     }
 
     auto rect_dsc = message->GetDescriptor();
-    DEBUG(rect_dsc != nullptr);
     auto a_dsc = rect_dsc->FindFieldByName("a");
-    DEBUG(a_dsc != nullptr);
     auto point_dsc = a_dsc->message_type();
-    DEBUG(point_dsc != nullptr);
     auto abscissa_dsc = point_dsc->FindFieldByName("abscissa");
-    DEBUG(abscissa_dsc != nullptr);
     auto name_dsc = rect_dsc->FindFieldByName("name");
-    DEBUG(name_dsc != nullptr);
     auto rect_refl = message_prototype->GetReflection();
-    DEBUG(rect_refl != nullptr);
     auto point_refl = point_prototype->GetReflection();
-    DEBUG(rect_refl != nullptr);
 
     {
         int64_t abscissa;
