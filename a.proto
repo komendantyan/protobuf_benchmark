@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message TPoint {
+    sint64 abscissa = 1;
+    sint64 ordinate = 2;
+};
+
+message TRectangle {
+    TPoint a = 1;
+    TPoint b = 2;
+    TPoint c = 3;
+    TPoint d = 4;
+    enum EColor {
+        EMPTY = 0;
+        RED = 1;
+        GREEN = 2;
+        BLUE = 3;
+    };
+    string name = 5;
+    EColor fill = 6;
+    string label = 7;
+};
