@@ -25,4 +25,3 @@ clean:
 
 a.out: a.pb.o main.o
 	g++ -lprotobuf -lpthread -o $@ main.o a.pb.o
-	rm -rf *.o
